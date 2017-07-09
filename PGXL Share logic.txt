@@ -1,0 +1,26 @@
+http://files.postgres-xl.org/documentation/tutorial-createcluster.html
+
+
+performace_test_grouporderprogress=# select xc_node_id,* from log_data2;
+ xc_node_id | log_filename | idbusiness_entity | loaded | row_count |  log_date  | load_attempts | file_size 
+------------+--------------+-------------------+--------+-----------+------------+---------------+-----------
+ -197561594 | test         |                 0 | n      |         0 | 1970-01-01 |             0 |         0
+
+ performace_test_grouporderprogress=# SELECT oid, * FROM pgxc_node;
+  oid  |  node_name   | node_type | node_port | node_host  | nodeis_primary | nodeis_preferred |   node_id   
+-------+--------------+-----------+-----------+------------+----------------+------------------+-------------
+ 11819 | coord_135    | C         |      5432 | 10.0.0.135 | f              | f                |  1426133712
+ 16384 | coord_136    | C         |      5432 | 10.0.0.136 | f              | f                | -1844959414
+ 16385 | coord_137    | C         |      5432 | 10.0.0.137 | f              | f                | -1789928244
+ 16386 | coord_138    | C         |      5432 | 10.0.0.138 | f              | f                |  1981935411
+ 16387 | coord_139    | C         |      5432 | 10.0.0.139 | f              | f                |   589682404
+ 16388 | coord_140    | C         |      5432 | 10.0.0.140 | f              | f                |   562966226
+ 16389 | datanode_135 | D         |      5433 | 10.0.0.135 | f              | t                |  -197561594
+ 16390 | datanode_136 | D         |      5433 | 10.0.0.136 | f              | f                | -1351142168
+ 16391 | datanode_137 | D         |      5433 | 10.0.0.137 | f              | f                | -2112104557
+ 16392 | datanode_138 | D         |      5433 | 10.0.0.138 | f              | f                |   476338076
+ 16393 | datanode_139 | D         |      5433 | 10.0.0.139 | f              | f                |   342060175
+ 16394 | datanode_140 | D         |      5433 | 10.0.0.140 | f              | f                |  2111972510
+
+ 
+ 
