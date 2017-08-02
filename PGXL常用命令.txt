@@ -1,0 +1,4 @@
+select * from pg_prepared_xacts; //查看two phase事务
+select * from pg_prepared_statements;
+select relpages,reltuples from pg_class where relname='tb1'  //查看统计信息
+ANALYZE (COORDINATOR)  //把数据节点统计信息加到协调器
