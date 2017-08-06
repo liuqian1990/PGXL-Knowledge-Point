@@ -1,0 +1,7 @@
+select * from pg_prepared_xacts; //查看two phase事务 (引起故障 are dead but not yet removable)
+select * from pg_prepared_statements;
+select relpages,reltuples from pg_class where relname='tb1'  //查看统计信息
+ANALYZE (COORDINATOR)  //把数据节点统计信息加到协调器
+
+pgxc_clean -a //清理two phase事务,如果没有任信息输出，只有进入到协调器、数据节点下pg_twophase目录下删除去所有
+pgxc_clean: There's no prepared 2PC in this cluster.  Exiting.
